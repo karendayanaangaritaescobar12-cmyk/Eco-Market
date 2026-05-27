@@ -62,3 +62,14 @@ input:invalid,
 textarea:invalid {
     border: 2px solid red;
 }
+
+.logo-img{
+    width:180px;
+    height:auto;
+    object-fit:contain;
+}
+
+
+.icon-img{
+    width:50px;
+}
