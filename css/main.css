@@ -8,7 +8,9 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f5dc;
     color: #333;
+    padding-top:120px;
 }
+
 
 a {
     text-decoration: none;
@@ -20,8 +22,8 @@ img {
 }
 
 :root {
-    --green: #2ecc71;
-    --green-dark: #27ae60;
+    --green: #4e6b4e75;
+    --green-dark: #253b2ea6;
     --beige: #f5f5dc;
     --white: #fff;
     --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
