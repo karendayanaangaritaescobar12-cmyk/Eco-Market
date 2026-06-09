@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Huella de Carbono</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body>
+
+    <nav class="nav">
+
+        <a href="../index.html" class="nav-btn">Inicio</a>
+
+        <a href="productos.html" class="nav-btn">Productos</a>
+
+        <a href="sobre-nosotros.html" class="nav-btn">Nosotros</a>
+
+        <a href="contacto.html" class="nav-btn">Contacto</a>
+
+        <a href="sostenibilidad.html" class="nav-btn">Sostenibilidad</a>
+
+    </nav>
+
+    <div class="calculator-container">
+
+        <h1>🌱 Calculadora de Huella de Carbono</h1>
+
+        <p class="subtitle">
+            Completa las secciones para estimar tu impacto ambiental.
+        </p>
+
+        <input type="radio" id="tab-hogar" name="tabs" checked class="tab-switch">
+        <input type="radio" id="tab-transporte" name="tabs" class="tab-switch">
+
+        <div class="tab-navigation">
+
+            <label for="tab-hogar" class="tab-label label-hogar">
+                🏠 Consumo del Hogar
+            </label>
+
+            <label for="tab-transporte" class="tab-label label-transporte">
+                🚗 Movilidad y Transporte
+            </label>
+
+        </div>
+
+        <form action="#" method="POST" class="carbon-form">
+
+            <!-- PESTAÑA HOGAR -->
+            <div class="tab-content content-hogar">
+
+                <h2>1. Consumo en el Hogar (Mensual)</h2>
+
+                <div class="input-group">
+                    <label for="luz">Energía Eléctrica:</label>
+
+                    <input type="number"
+                           id="luz"
+                           min="0"
+                           placeholder="Ej. 150 kWh"
+                           required>
+
+                    <small>
+                        Revisa tu último recibo de luz para ver los kWh consumidos.
+                    </small>
+                </div>
+
+                <div class="input-group">
+                    <label for="gas">Gas Natural o GLP:</label>
+
+                    <input type="number"
+                           id="gas"
+                           min="0"
+                           placeholder="Ej. 20 m³ o Garrafas">
+                </div>
+
+                <div class="input-group">
+
+                    <label for="personas">
+                        Habitantes en la vivienda:
+                    </label>
+
+                    <select id="personas">
+                        <option value="1">1 persona (Solo)</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 - 4 personas</option>
+                        <option value="5">5 o más personas</option>
+                    </select>
+
+                </div>
+
+                <div class="form-footer">
+
+                    <label for="tab-transporte"
+                           class="btn-next">
+                        Siguiente Paso ➔
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- PESTAÑA TRANSPORTE -->
+            <div class="tab-content content-transporte">
+
+                <h2>2. Movilidad y Transporte (Mensual)</h2>
+
+                <div class="input-group">
+
+                    <label for="vehiculo">
+                        Vehículo Principal de Uso:
+                    </label>
+
+                    <select id="vehiculo">
+                        <option value="ninguno">
+                            No tengo / Uso bicicleta o camino
+                        </option>
+
+                        <option value="gasolina">
+                            Automóvil (Gasolina)
+                        </option>
+
+                        <option value="diesel">
+                            Automóvil (Diésel)
+                        </option>
+
+                        <option value="electrico">
+                            Híbrido / Eléctrico
+                        </option>
+
+                        <option value="moto">
+                            Motocicleta
+                        </option>
+                    </select>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="km-auto">
+                        Distancia estimada en vehículo propio:
+                    </label>
+
+                    <input type="number"
+                           id="km-auto"
+                           min="0"
+                           placeholder="Ej. 300 km al mes">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="km-publico">
+                        Uso de Transporte Público:
+                    </label>
+
+                    <input type="number"
+                           id="km-publico"
+                           min="0"
+                           placeholder="Ej. 120 km al mes">
+
+                </div>
+
+                <div class="input-group">
+
+                    <label for="vuelos">
+                        Viajes en Avión realizados al año:
+                    </label>
+
+                    <input type="number"
+                           id="vuelos"
+                           min="0"
+                           placeholder="Ej. 2 vuelos">
+
+                </div>
+
+                <!-- REQUERIMIENTO RANGE SLIDER -->
+                <div class="input-group">
+
+                    <label for="impacto">
+                        Nivel de consumo mensual de combustible:
+                    </label>
+
+                    <input type="range"
+                           id="impacto"
+                           min="0"
+                           max="100"
+                           value="50"
+                           class="eco-slider">
+
+                    <div class="slider-labels">
+                        <span>🌱 Bajo</span>
+                        <span>♻️ Medio</span>
+                        <span>🚗 Alto</span>
+                    </div>
+
+                </div>
+
+                <div class="form-footer">
+
+                    <label for="tab-hogar"
+                           class="btn-back">
+                        ⬅ Volver
+                    </label>
+
+                    <button type="submit"
+                            class="btn-submit">
+                        Enviar Formulario 🌱
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="../video/fondo.mp4" type="video/mp4">
+    </video>
+
+</body>
+
+</html>
