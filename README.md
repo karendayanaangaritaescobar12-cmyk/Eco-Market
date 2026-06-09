@@ -92,3 +92,10 @@ EcoMarket/
 │   └── contacto.html
 ├── index.html
 └── README.md
+![primera parte](image.png)
+![productos destacados](image-1.png)
+![productos](image-2.png)
+![nosotros](image-3.png)
+![contacto](image-4.png)
+![sostenibilidad primera etapa](image-5.png)
+![sostenibilidad ultima etapa](image-6.png)
